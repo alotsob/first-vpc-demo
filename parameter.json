@@ -1,0 +1,41 @@
+{
+    "AWSTemplateFormatVersion": "2010-09-09",
+    "Description": "",
+    "Metadata": {
+
+    },
+    "Parameters": {"MyInstance": {
+        "Description": "Choose intance type",
+        "Type": "String",
+        "Default": "t2.micro",
+        "AllowedValue": ["t2.nano", "t2.micro"],
+
+        "DBPassword": {
+            "Description": "Choose password",
+            "Type": "String",
+            "NoEcho": "true",
+            "Minlength": 6,
+            "Maxlength": 10,
+
+            "AZs": {
+                "Description": "Choose AZ",
+                "Type": "AWS::EC2::AvailabilityZone::Name"
+
+            }
+        }
+    }
+
+    },
+    "Mappings": {
+
+    },
+    "Conditions": {
+
+    },
+    "Resources": {
+
+    },
+    "Outputs": {
+
+    }
+}
